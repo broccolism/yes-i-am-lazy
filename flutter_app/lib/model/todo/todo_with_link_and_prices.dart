@@ -1,7 +1,6 @@
 import 'package:flutter_app/model/models.dart';
-import 'package:flutter_app/model/todo_category.dart';
 
-class TodoWithLinkAndPrices extends SimpleTodo {
+class TodoWithLinkAndPrices extends Todo {
   TodoWithLinkAndPrices({
     required String name,
     required TodoCategory category,
