@@ -38,7 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: CupertinoColors.secondarySystemBackground,
       body: Center(
-        child: HorizontalTodoItem(todo: Todo(name: "밥 먹기", category: TodoCategories.basic)),
+        child: HorizontalTodoItem(
+            todo: Todo(name: "밥 먹기", category: TodoCategories.buy)),
       ),
     );
   }

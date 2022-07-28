@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/const/todo_categories.dart';
+import 'package:flutter_app/view/widget/todo_item/category_badge.dart';
 import 'package:flutter_app/view/widget/todo_item/todo_item_wrapper.dart';
 
 import '../../../model/models.dart';
@@ -22,18 +23,18 @@ class _HorizontalTodoItemState extends State<HorizontalTodoItem> {
     return TodoItemWrapper(
       todoItem: Row(
         children: [
+          CategoryBadge(category: widget.todo.category),
+          SizedBox(width: 8),
           _name(widget.todo.name),
-          _category(widget.todo),
         ],
       ),
     );
   }
 
   Widget _name(String name) {
-    return Text(name);
-  }
-
-  Widget _category(Todo todo) {
-    return todo.category != TodoCategories.basic ? Text(todo.category.name) : const SizedBox();
+    return Text(
+      name,
+      style: TextStyle(fontSize: 16),
+    );
   }
 }
